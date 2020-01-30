@@ -1,0 +1,95 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <parent>
+    <groupId>com.maintplan</groupId>
+  <artifactId>MaintenancePlanner</artifactId>
+    <version>0.0.1-SNAPSHOT</version>
+  </parent>
+  <artifactId>MaintenancePlanner-Core</artifactId>
+  <packaging>jar</packaging>
+  <name>MaintenancePlanner-Core</name>
+  
+   <properties>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>		
+        <maven.compiler.source>1.8</maven.compiler.source>
+        <maven.compiler.target>1.8</maven.compiler.target>	
+  		<mysql.driver>5.1.5</mysql.driver>
+	   <hibernate.version>5.4.2.Final</hibernate.version>
+   		<spring.version>5.1.7.RELEASE</spring.version>	
+   		
+		 <!-- testing -->  
+        <org.hamcrest.version>1.3</org.hamcrest.version>
+        <mockito.version>1.9.5</mockito.version>
+        <junit.version>4.12</junit.version>	        
+	        	  
+    </properties>
+  
+   <dependencies>
+     
+     
+     <!-- MySql Driver -->
+		<dependency>
+		    <groupId>mysql</groupId>
+		    <artifactId>mysql-connector-java</artifactId>
+		    <version>8.0.17</version>
+		</dependency>
+    		
+	
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-jdbc</artifactId>
+			<version>${spring.version}</version>
+		</dependency>
+
+	   <dependency>
+		   <groupId>org.hibernate</groupId>
+		   <artifactId>hibernate-core</artifactId>
+		   <version>${hibernate.version}</version>
+	   </dependency>
+
+	   <dependency>
+		   <groupId>org.springframework</groupId>
+		   <artifactId>spring-orm</artifactId>
+		   <version>${version.spring}</version>
+	   </dependency>
+		
+		<!-- TEST libs -->
+			
+			  <!--  test -->
+		        <dependency>
+		            <groupId>junit</groupId>
+		            <artifactId>junit</artifactId>
+		            <version>${junit.version}</version>
+		            <scope>test</scope>
+		        </dependency>
+		        <dependency>
+		            <groupId>org.hamcrest</groupId>
+		            <artifactId>hamcrest-core</artifactId>
+		            <version>${org.hamcrest.version}</version>
+		            <scope>test</scope>
+		        </dependency>
+		        <dependency>
+		            <groupId>org.hamcrest</groupId>
+		            <artifactId>hamcrest-library</artifactId>
+		            <version>${org.hamcrest.version}</version>
+		            <scope>test</scope>
+		        </dependency>
+		        <dependency>
+		            <groupId>org.hamcrest</groupId>
+		            <artifactId>hamcrest-all</artifactId>
+		            <version>${org.hamcrest.version}</version>
+		            <scope>test</scope>
+		        </dependency>
+		        <dependency>
+		            <groupId>org.mockito</groupId>
+		            <artifactId>mockito-core</artifactId>
+		            <version>${mockito.version}</version>
+		            <scope>test</scope>
+		        </dependency>
+			
+			</dependencies>
+   <modules>
+<!--   	<module>Spring-410-Jdbc</module>-->
+<!--   	<module>Spring-405-Commons</module>-->
+   </modules>
+</project>
