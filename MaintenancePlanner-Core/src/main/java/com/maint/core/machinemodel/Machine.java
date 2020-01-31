@@ -2,14 +2,16 @@ package com.maint.core.machinemodel;
 
 import lombok.Data;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
 
 @Data
 @Entity
-
+@NamedQueries({
+        @NamedQuery(
+                name = "Machine_ByName",
+                query = "from Machine where machineName = :machineName"
+        )
+})
 
 public class Machine {
 

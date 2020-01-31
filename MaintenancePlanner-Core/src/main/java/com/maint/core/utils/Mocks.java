@@ -7,9 +7,9 @@ public class Mocks {
 
 	public static UserDto mockUser(){
 		UserDto mock = new UserDto();
-		mock.setFirstName("Stefano");
-		mock.setLastName("Fiorenza");
-		mock.setEmail("stefanofiorenza@email.com");
+		mock.setFirstName("Jüri");
+		mock.setLastName("Juurikas");
+		mock.setEmail("jyrijuurikas@email.com");
 		mock.setStartDate("2014-12-11");
 		mock.setUserRoleId(4L);
 		return mock;
@@ -30,9 +30,23 @@ public class Mocks {
 		Machine newMachine = new Machine();
 		newMachine.setMachineName("Juno");
 		newMachine.setStartupDate("2019-05-25");
-		newMachine.setMachineProducerId(12L);
 		newMachine.setLocationId(3L);
 		newMachine.setMaintenancePlanId(4L);
+		newMachine.setMachineProducerId(12L);
+
+		return newMachine;
+
+	}
+
+	public static Machine updateMachine(){
+		Machine newMachine = new Machine();
+		newMachine.setId(9L);
+		newMachine.setMachineName("juku");
+		newMachine.setStartupDate("2019-06-25");
+		newMachine.setLocationId(7L);
+		newMachine.setMaintenancePlanId(4L);
+		newMachine.setMachineProducerId(12L);
+
 		return newMachine;
 
 	}

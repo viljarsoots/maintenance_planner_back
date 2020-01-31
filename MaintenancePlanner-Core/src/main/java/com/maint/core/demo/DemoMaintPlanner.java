@@ -8,6 +8,8 @@ import lombok.extern.slf4j.Slf4j;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
+import java.util.List;
+
 
 @Slf4j
 public class DemoMaintPlanner {
@@ -22,6 +24,11 @@ public class DemoMaintPlanner {
 //		System.out.println("Found "+machine.toString());
 		Long newId = machineDao.save(Mocks.mockMachine());
 		System.out.println("New Id: " + newId );
+//		List<Machine> machines = machineDao.findByName("Juno");
+//		System.out.println("Junos found " + machines.toString());
+		//machineDao.update(Mocks.updateMachine());
+		machineDao.delete(Mocks.updateMachine());
+
 
 //		ApplicationContext context = new AnnotationConfigApplicationContext(MaintAppConfig.class);
 //		UserService userService =context.getBean(UserService.class);

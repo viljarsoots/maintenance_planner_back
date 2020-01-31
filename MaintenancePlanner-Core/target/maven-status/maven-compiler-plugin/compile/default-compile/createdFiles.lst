@@ -4,13 +4,17 @@ com\maint\core\dao\UserDao.class
 com\maint\core\demo\DemoCrudUser.class
 com\maint\core\dao\helpers\MaitenanceHistoryRowMapper.class
 com\maint\core\dao\UserDaoJdbcSupportImpl.class
+com\maint\core\machinedao\MachineDaoImpl.class
 com\maint\core\utils\BeanUtils.class
+com\maint\core\machinedao\MachineDao.class
 com\maint\core\service\UserService.class
 com\maint\core\demo\DemoMaintPlanner.class
 com\maint\core\dao\helpers\UserRowMapper.class
+com\maint\core\machinemodel\Machine.class
 com\maint\core\dao\Queries.class
 com\maint\core\dao\helpers\UserMaintHisRsExtractor.class
 com\maint\core\maitenancehistorydto\MaintenanceHistoryDto.class
 com\maint\core\utils\Mocks.class
 com\maint\core\config\MaintAppConfig.class
+com\maint\core\config\AppConfig.class
 com\maint\core\userdto\UserDto.class
