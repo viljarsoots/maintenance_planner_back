@@ -7,9 +7,6 @@ com\maint\core\dao\UserDaoJdbcSupportImpl.class
 com\maint\core\utils\BeanUtils.class
 com\maint\core\service\UserService.class
 com\maint\core\demo\DemoMaintPlanner.class
-com\maint\core\hillbernate\model\Machine.class
-com\maint\core\dao\MachineDaoImpl.class
-com\maint\core\dao\MachineDao.class
 com\maint\core\dao\helpers\UserRowMapper.class
 com\maint\core\dao\Queries.class
 com\maint\core\dao\helpers\UserMaintHisRsExtractor.class
