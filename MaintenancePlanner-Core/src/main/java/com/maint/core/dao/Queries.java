@@ -1,7 +1,5 @@
 package com.maint.core.dao;
 
-import com.maint.core.maitenancehistory.MaintenanceHistory;
-
 public class Queries {
 
 	

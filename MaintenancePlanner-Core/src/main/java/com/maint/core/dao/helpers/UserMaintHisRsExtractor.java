@@ -1,6 +1,6 @@
 package com.maint.core.dao.helpers;
 
-import com.maint.core.maitenancehistory.MaintenanceHistory;
+import com.maint.core.model.MaintenanceHistory;
 import com.maint.core.model.User;
 import org.springframework.dao.DataAccessException;
 import org.springframework.jdbc.core.ResultSetExtractor;
@@ -24,7 +24,7 @@ public class UserMaintHisRsExtractor implements ResultSetExtractor<Map<Long, Use
                 tableAsMap.put(technicianId, user);
             }
             MaintenanceHistory maintenanceHistory = mapIntoMaintenanceHistory(rs);
-            user.getMaintenanceHistoryList().add(maintenanceHistory);
+
 
         }
 

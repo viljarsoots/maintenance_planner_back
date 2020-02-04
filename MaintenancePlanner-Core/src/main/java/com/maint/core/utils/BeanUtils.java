@@ -1,6 +1,6 @@
 package com.maint.core.utils;
 
-import com.maint.core.userdto.UserDto;
+import com.maint.core.beans.UserDto;
 import com.maint.core.model.User;
 
 public class BeanUtils {

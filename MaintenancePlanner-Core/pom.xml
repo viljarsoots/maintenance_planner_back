@@ -50,7 +50,7 @@
 	   <dependency>
 		   <groupId>org.springframework</groupId>
 		   <artifactId>spring-orm</artifactId>
-		   <version>${version.spring}</version>
+
 	   </dependency>
 		
 		<!-- TEST libs -->
@@ -89,7 +89,6 @@
 			
 			</dependencies>
    <modules>
-<!--   	<module>Spring-410-Jdbc</module>-->
-<!--   	<module>Spring-405-Commons</module>-->
+<!--	   <module>MaintenancePlanner-WEB</module>-->
    </modules>
 </project>

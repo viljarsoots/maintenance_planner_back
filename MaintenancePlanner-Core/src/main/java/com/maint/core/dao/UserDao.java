@@ -1,24 +1,22 @@
 package com.maint.core.dao;
 
-import com.maint.core.maitenancehistory.MaintenanceHistory;
+import com.maint.core.model.MaintenanceHistory;
 import com.maint.core.model.User;
-import com.maint.core.userdto.UserDto;
+import com.maint.core.beans.UserDto;
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.stereotype.Repository;
 
 import java.util.List;
 
-public interface UserDao {
 
-    public User searchUserById(Long id);
+@Repository
+public interface UserDao extends JpaRepository<User,Long> {
 
-    public void saveUser(UserDto userDto);
+     User findUserById(Long id);
 
-    public void updateUser(UserDto userDto);
 
-    public void deleteUser(Long id);
 
-   public List<MaintenanceHistory> getUserWork(Long technicianId);
 
-   public List<User> getUserMaintenances(Long id);
 
 
 }

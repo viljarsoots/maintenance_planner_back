@@ -2,6 +2,7 @@ com\maint\core\model\User.class
 com\maint\core\maitenancehistory\MaintenanceHistory.class
 com\maint\core\dao\UserDao.class
 com\maint\core\demo\DemoCrudUser.class
+com\maint\core\config\MaintCoreContext.class
 com\maint\core\dao\helpers\MaitenanceHistoryRowMapper.class
 com\maint\core\dao\UserDaoJdbcSupportImpl.class
 com\maint\core\machinedao\MachineDaoImpl.class

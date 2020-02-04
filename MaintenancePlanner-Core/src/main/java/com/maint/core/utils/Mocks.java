@@ -1,7 +1,7 @@
 package com.maint.core.utils;
 
-import com.maint.core.machinemodel.Machine;
-import com.maint.core.userdto.UserDto;
+import com.maint.core.model.Machine;
+import com.maint.core.beans.UserDto;
 
 public class Mocks {
 
