@@ -1,11 +1,13 @@
 package com.maint.core.model;
 
+import jdk.nashorn.internal.objects.annotations.Setter;
+import lombok.AccessLevel;
 import lombok.Data;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Set;
 
 @Data
 @Entity
@@ -21,5 +23,17 @@ public class User {
 	private String startDate;
 	private Long userRoleId;
 
-	
+	@OneToMany
+	@JoinColumn(name = "userId")
+	private Set<UserRoleTable> userRoles;
+
+//	@lombok.Setter(value= AccessLevel.NONE)
+//
+//	private List<UserRoleTable> userRoleTableList = new ArrayList<UserRoleTable>();
+//
+//public void addUserRoleTable(UserRoleTable userRole){
+//	userRoleTableList.add(userRole);
+//	userRole.getUserId().add(this);
+//}
+
 }

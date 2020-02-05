@@ -4,6 +4,7 @@ import com.maint.core.dao.UserDao;
 import com.maint.core.beans.UserDto;
 import com.maint.core.model.User;
 import com.maint.core.service.UserService;
+import com.maint.core.utils.BeanUtils;
 import com.maint.core.utils.Mocks;
 import com.maint.web.beans.ResponseBean;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -25,14 +26,15 @@ public class UserRestController {
     @Autowired
     private UserService userService;
 
-//    @RequestMapping(value = "/save", method = RequestMethod.POST,
-//            produces = MediaType.APPLICATION_JSON_VALUE,
-//            consumes= MediaType.APPLICATION_JSON_VALUE)
-//    public @ResponseBody
-//    ResponseBean<String> moduleProcess(@RequestBody UserDto userDto) {
-//       User newUser = userDao.save(new User();
-//        return new ResponseBean<>("Course Saved");
-//    }
+    @RequestMapping(value = "/save", method = RequestMethod.POST,
+            produces = MediaType.APPLICATION_JSON_VALUE,
+            consumes= MediaType.APPLICATION_JSON_VALUE)
+    public @ResponseBody
+    ResponseBean<String> moduleProcess(@RequestBody UserDto userDto) {
+       User newUser = BeanUtils.dto2Model(userDto);
+               userDao.save(newUser);
+        return new ResponseBean<>("User Saved");
+    }
 //
 //    @RequestMapping(value = "/search", method = RequestMethod.POST,
 //            produces = MediaType.APPLICATION_JSON_VALUE,
