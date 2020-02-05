@@ -1,0 +1,8 @@
+com\maint\web\MaintApplication.class
+com\maint\web\controllers\EmployeeRestController.class
+com\maint\web\controllers\CourseRestController.class
+com\maint\web\controllers\ModuleRestController.class
+com\maint\web\controllers\EditionRestController.class
+com\maint\web\controllers\TrainerRestController.class
+com\maint\web\controllers\CommonRestController.class
+com\maint\web\beans\ResponseBean.class
