@@ -5,12 +5,12 @@ import lombok.Data;
 @Data
 public class MachineDto {
 
-	private int id;
+	private Long id;
 	private String machineName;
 	private String startupDate;
-	private int locationId;
-	private int maintenancePlanId;
-	private int machineProducerId;
+	private Long locationId;
+	private Long maintenancePlanId;
+	private Long machineProducerId;
 	
 	
 	

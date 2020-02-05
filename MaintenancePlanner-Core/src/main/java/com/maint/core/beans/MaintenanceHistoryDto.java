@@ -5,10 +5,10 @@ import lombok.Data;
 @Data
 public class MaintenanceHistoryDto {
 
-	private int id;
-	private int machineId;
-	private int technicianId;
-	private int maintenaceId;
+	private Long id;
+	private Long machineId;
+	private Long technicianId;
+	private Long maintenaceId;
 	private String lastMaintenanceDate;
 	
 }

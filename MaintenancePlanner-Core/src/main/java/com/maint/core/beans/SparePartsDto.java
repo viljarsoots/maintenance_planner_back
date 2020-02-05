@@ -5,12 +5,12 @@ import lombok.Data;
 @Data
 public class SparePartsDto {
 	
-	private int id;
-	private int partNumber;
+	private Long id;
+	private Long partNumber;
 	private String partName;
 	private double quantity;
 	private double minQuantity;
 	private double maxQuantity;
-	private int machineId;
+	private Long machineId;
 	
 }

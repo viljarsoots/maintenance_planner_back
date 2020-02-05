@@ -1,9 +1,10 @@
 package com.maint.web.controllers;
 
-//import com.knits.tms.beans.CourseDto;
-//import com.knits.tms.beans.CourseSearchDto;
-//import com.knits.tms.service.CourseService;
-//import com.knits.tms.util.BeanMappingUtils;
+import com.maint.core.dao.UserDao;
+import com.maint.core.beans.UserDto;
+import com.maint.core.model.User;
+import com.maint.core.service.UserService;
+import com.maint.core.utils.Mocks;
 import com.maint.web.beans.ResponseBean;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.MediaType;
@@ -15,18 +16,21 @@ import java.util.stream.Collectors;
 
 @Controller
 @CrossOrigin
-@RequestMapping("/rest/course")
-public class CourseRestController {
+@RequestMapping("/rest/user")
+public class UserRestController {
 
-//    @Autowired
-//    private CourseService courseService;
-//
+    @Autowired
+    private UserDao userDao;
+
+    @Autowired
+    private UserService userService;
+
 //    @RequestMapping(value = "/save", method = RequestMethod.POST,
 //            produces = MediaType.APPLICATION_JSON_VALUE,
 //            consumes= MediaType.APPLICATION_JSON_VALUE)
 //    public @ResponseBody
-//    ResponseBean<String> moduleProcess(@RequestBody CourseDto courseDto) {
-//        courseService.saveCourse(courseDto);
+//    ResponseBean<String> moduleProcess(@RequestBody UserDto userDto) {
+//       User newUser = userDao.save(new User();
 //        return new ResponseBean<>("Course Saved");
 //    }
 //
@@ -42,13 +46,13 @@ public class CourseRestController {
 //        return new ResponseBean<List<CourseDto>>(courseDtos);
 //    }
 //
-//    @RequestMapping(value = "/{id}", method = RequestMethod.GET,
-//            produces = MediaType.APPLICATION_JSON_VALUE)
-//    public @ResponseBody
-//    ResponseBean<CourseDto> find(@PathVariable Long id) {
-//        CourseDto courseDto = courseService.findById(id);
-//        return new ResponseBean<CourseDto>(courseDto);
-//    }
+    @RequestMapping(value = "/{id}", method = RequestMethod.GET,
+            produces = MediaType.APPLICATION_JSON_VALUE)
+    public @ResponseBody
+    ResponseBean<UserDto> find(@PathVariable Long id) {
+        UserDto userDto = userService.findById(id);
+        return new ResponseBean<UserDto>(userDto);
+    }
 //
 //    @RequestMapping(value = "/edit", method = RequestMethod.POST,
 //            produces = MediaType.APPLICATION_JSON_VALUE,

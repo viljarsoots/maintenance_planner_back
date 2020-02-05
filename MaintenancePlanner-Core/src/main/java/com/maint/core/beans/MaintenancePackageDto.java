@@ -5,7 +5,7 @@ import lombok.Data;
 @Data
 public class MaintenancePackageDto {
 
-	private int id;
-	private int maintenanceId;
-	private int sparePartId;
+	private Long id;
+	private Long maintenanceId;
+	private Long sparePartId;
 }

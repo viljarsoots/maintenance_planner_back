@@ -5,9 +5,9 @@ import lombok.Data;
 @Data
 public class MaintenancesDto {
 
-	private int id;
+	private Long id;
 	private String name;
-	private int maintenancePlanId;
-	private int maintenancePackageId;
+	private Long maintenancePlanId;
+	private Long maintenancePackageId;
 	private double timeConsumption;
 }

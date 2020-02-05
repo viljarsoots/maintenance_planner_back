@@ -5,7 +5,7 @@ import lombok.Data;
 @Data
 public class MachineProducerDto {
 
-	private int id;
+	private Long id;
 	private String producerName;
 	private String producerAddress;
 	
