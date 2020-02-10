@@ -17,6 +17,7 @@ import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
 import java.io.IOException;
 import java.util.List;
+import java.util.Optional;
 
 
 @Service
@@ -33,23 +34,42 @@ public class UserService {
     private EntityManager entityManager;
 
 
-    public UserDto findById(Long id) {
+    public Optional<User> findById(Long id) {
         if (!(userDao.findById(id).isPresent())){
             throw new UserException("Course was not found!");
         } else {
-            User user = userDao.findById(id).get();
-            UserDto userDto = BeanUtils.model2Dto(user);
-            return userDto;
+            return Optional.of(userDao.findById(id).get());
+
         }
     }
 
     public void save(UserDto userDto) throws IOException {
-        User userAsModel = BeanUtils.dto2Model(userDto);
-        userDao.save(userAsModel);
+        User user = null;
+        if(userDto.getId() != null){
+           Optional<User> optionalUser = findById(userDto.getId());
+            if(optionalUser.isPresent()){
+                user = optionalUser.get();
+                updateUser(user, userDto);
+            }
+        }else {
+            user = BeanUtils.dto2Model(userDto);
+        }
+        userDao.save(user);
     }
+
+    public void updateUser(User user, UserDto userDto){
+        user.setId(userDto.getId());
+        user.setFirstName(userDto.getFirstName());
+        user.setLastName(userDto.getLastName());
+        user.setEmail(userDto.getEmail());
+        user.setStartDate(userDto.getStartDate());
+        user.setUserRoleId(userDto.getUserRoleId());
+
+        userDao.save(user);
+    }
+
     @Transactional
     public List<User> findAll() {
-
         return userDao.findAll();
     }
 //    public void saveUser(UserDto userDto){

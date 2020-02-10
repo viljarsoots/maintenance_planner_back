@@ -12,6 +12,7 @@ import org.springframework.web.bind.annotation.*;
 
 import java.io.IOException;
 import java.util.List;
+import java.util.Optional;
 
 @Controller
 @CrossOrigin("*")
@@ -58,9 +59,9 @@ public class UserRestController {
     @RequestMapping(value = "/user/{id}", method = RequestMethod.GET,
             produces = MediaType.APPLICATION_JSON_VALUE)
     public @ResponseBody
-    ResponseBean<UserDto> find(@PathVariable Long id) {
-        UserDto userDto = userService.findById(id);
-        return new ResponseBean<UserDto>(userDto);
+    ResponseBean<Optional<User>> find(@PathVariable Long id) {
+        Optional<User> userDto = userService.findById(id);
+        return new ResponseBean<Optional<User>>(userDto);
     }
 //
 //    @RequestMapping(value = "/edit", method = RequestMethod.POST,
