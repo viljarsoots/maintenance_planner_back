@@ -14,7 +14,7 @@ public class SpareParts {
 
 
 	@Id
-	@GeneratedValue(strategy = GenerationType.AUTO)
+	@GeneratedValue(strategy = GenerationType.SEQUENCE)
 	private Long id;
 	private Long partNumber;
 	private String partName;

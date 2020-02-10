@@ -13,7 +13,7 @@ public class Machine {
 
 
 	@Id
-	@GeneratedValue(strategy = GenerationType.AUTO)
+	@GeneratedValue(strategy = GenerationType.SEQUENCE)
 	private Long id;
 	private String machineName;
 	private String startupDate;

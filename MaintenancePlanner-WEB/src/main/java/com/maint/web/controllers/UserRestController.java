@@ -4,20 +4,18 @@ import com.maint.core.dao.UserDao;
 import com.maint.core.beans.UserDto;
 import com.maint.core.model.User;
 import com.maint.core.service.UserService;
-import com.maint.core.utils.BeanUtils;
-import com.maint.core.utils.Mocks;
 import com.maint.web.beans.ResponseBean;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.MediaType;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 
+import java.io.IOException;
 import java.util.List;
-import java.util.stream.Collectors;
 
 @Controller
-@CrossOrigin
-@RequestMapping("/rest/user")
+@CrossOrigin("*")
+@RequestMapping("/rest")
 public class UserRestController {
 
     @Autowired
@@ -26,16 +24,22 @@ public class UserRestController {
     @Autowired
     private UserService userService;
 
-    @RequestMapping(value = "/save", method = RequestMethod.POST,
+    @RequestMapping(value = "/user/save", method = RequestMethod.POST,
             produces = MediaType.APPLICATION_JSON_VALUE,
             consumes= MediaType.APPLICATION_JSON_VALUE)
     public @ResponseBody
-    ResponseBean<String> moduleProcess(@RequestBody UserDto userDto) {
-       User newUser = BeanUtils.dto2Model(userDto);
-               userDao.save(newUser);
+    ResponseBean<String> moduleProcess(@RequestBody UserDto userDto) throws IOException {
+
+               userService.save(userDto);
         return new ResponseBean<>("User Saved");
     }
-//
+
+
+    @GetMapping("/user")
+    public List<User> viewAllUser() {
+        return userService.viewAllUser();
+
+    }
 //    @RequestMapping(value = "/search", method = RequestMethod.POST,
 //            produces = MediaType.APPLICATION_JSON_VALUE,
 //            consumes= MediaType.APPLICATION_JSON_VALUE)
@@ -48,7 +52,7 @@ public class UserRestController {
 //        return new ResponseBean<List<CourseDto>>(courseDtos);
 //    }
 //
-    @RequestMapping(value = "/{id}", method = RequestMethod.GET,
+    @RequestMapping(value = "/user/{id}", method = RequestMethod.GET,
             produces = MediaType.APPLICATION_JSON_VALUE)
     public @ResponseBody
     ResponseBean<UserDto> find(@PathVariable Long id) {

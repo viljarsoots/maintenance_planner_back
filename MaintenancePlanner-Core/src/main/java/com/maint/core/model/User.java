@@ -14,7 +14,7 @@ import java.util.Set;
 public class User {
 
 	@Id
-	@GeneratedValue(strategy = GenerationType.AUTO)
+	@GeneratedValue(strategy = GenerationType.SEQUENCE)
 	private Long id;
 
 	private String firstName;
@@ -23,9 +23,17 @@ public class User {
 	private String startDate;
 	private Long userRoleId;
 
-	@OneToMany
-	@JoinColumn(name = "userId")
-	private Set<UserRoleTable> userRoles;
+	public User() {
+	}
+
+	//	@OneToMany
+//	@JoinColumn(name = "userId")
+//	private Set<UserRoleTable> userRoles;
+//
+//
+//	@OneToMany
+//	@JoinColumn(name= "tecnicianId")
+//	private Set<MaintenanceHistory> userMaintenances;
 
 //	@lombok.Setter(value= AccessLevel.NONE)
 //

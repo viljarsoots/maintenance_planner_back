@@ -14,7 +14,7 @@ public class MachineProducer {
 
 
 	@Id
-	@GeneratedValue(strategy = GenerationType.AUTO)
+	@GeneratedValue(strategy = GenerationType.SEQUENCE)
 	private Long id;
 	private String producerName;
 	private String producerAddress;

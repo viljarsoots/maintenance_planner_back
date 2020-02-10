@@ -10,6 +10,7 @@ public class BeanUtils {
 
 	public static User dto2Model(UserDto dto){
 		User user = new User();
+		user.setId(dto.getId());
 		user.setFirstName(dto.getFirstName());
 		user.setLastName(dto.getLastName());
 		user.setEmail(dto.getEmail());
@@ -20,6 +21,7 @@ public class BeanUtils {
 
 	public static UserDto model2Dto(User model){
 		UserDto dto = new UserDto();
+		dto.setId(model.getId());
 		dto.setFirstName(model.getFirstName());
 		dto.setLastName(model.getLastName());
 		dto.setEmail(model.getEmail());

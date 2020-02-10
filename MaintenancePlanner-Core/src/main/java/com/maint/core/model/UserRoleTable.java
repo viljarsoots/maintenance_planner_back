@@ -9,13 +9,13 @@ import javax.persistence.*;
 public class UserRoleTable {
 
 	@Id
-	@GeneratedValue(strategy = GenerationType.AUTO)
+	@GeneratedValue(strategy = GenerationType.SEQUENCE)
 	private Long id;
 	private Long userId;
 	private Long userRoleId;
 
-	@ManyToOne
-	private User user;
+//	@ManyToOne
+//	private User user;
 
 
 

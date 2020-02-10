@@ -14,7 +14,7 @@ public class MaintenancePackage {
 
 
 	@Id
-	@GeneratedValue(strategy = GenerationType.AUTO)
+	@GeneratedValue(strategy = GenerationType.SEQUENCE)
 	private Long id;
 	private Long maintenanceId;
 	private Long sparePartId;
