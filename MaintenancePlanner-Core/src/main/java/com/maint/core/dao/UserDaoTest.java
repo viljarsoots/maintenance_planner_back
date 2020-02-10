@@ -19,7 +19,7 @@ public class UserDaoTest {
         ApplicationContext context = new AnnotationConfigApplicationContext(AppConfig.class);
         UserService userService =context.getBean(UserService.class);
 
-        List<User> allUsers = (List<User>) userService.viewAllUser();
+        List<User> allUsers = (List<User>) userService.findAll();
         System.out.println(allUsers.toString());
     }
 }

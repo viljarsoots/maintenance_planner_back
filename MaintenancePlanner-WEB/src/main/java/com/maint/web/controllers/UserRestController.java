@@ -35,9 +35,12 @@ public class UserRestController {
     }
 
 
-    @GetMapping("/user")
-    public List<User> viewAllUser() {
-        return userService.viewAllUser();
+    @RequestMapping(value = "/user", method = RequestMethod.GET,
+            produces = MediaType.APPLICATION_JSON_VALUE)
+    public @ResponseBody
+    ResponseBean<List<User>> findAll() {
+        List<User> user = userService.findAll();
+        return new ResponseBean<List<User>>(user);
 
     }
 //    @RequestMapping(value = "/search", method = RequestMethod.POST,

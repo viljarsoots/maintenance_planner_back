@@ -11,7 +11,7 @@ import java.util.List;
 
 
 @Repository
-public interface UserDao extends CrudRepository<User,Long> {
+public interface UserDao extends JpaRepository<User,Long> {
 
      User findUserById(Long id);
 

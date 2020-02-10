@@ -48,9 +48,9 @@ public class UserService {
         userDao.save(userAsModel);
     }
     @Transactional
-    public List<User> viewAllUser() {
-        List<User> allUsers = (List<User>) userDao.findAll();
-        return allUsers;
+    public List<User> findAll() {
+
+        return userDao.findAll();
     }
 //    public void saveUser(UserDto userDto){
 //        User userAsModel = BeanUtils.dto2Model((userDto));
