@@ -16,4 +16,9 @@ public class UserRole {
 	@GeneratedValue(strategy = GenerationType.SEQUENCE)
 	private Long id;
 	private String userRole;
+
+
+
+
+
 }

@@ -1,9 +1,7 @@
 package com.maint.core.utils;
 
 import com.maint.core.beans.UserDto;
-import com.maint.core.beans.UserRoleTableDto;
 import com.maint.core.model.User;
-import com.maint.core.model.UserRoleTable;
 
 public class BeanUtils {
 
@@ -29,18 +27,6 @@ public class BeanUtils {
 		dto.setUserRoleId((long) model.getUserRoleId());
 		return dto;
 	}
-	public static UserRoleTable dto2Model(UserRoleTableDto userRoleTableDto){
-		UserRoleTable userRoleTable = new UserRoleTable();
-		userRoleTable.setUserId(userRoleTableDto.getUserId());
-		userRoleTable.setUserRoleId(userRoleTableDto.getUserRoleId());
-		return userRoleTable;
-	}
 
-	public static UserRoleTableDto model2Dto(UserRoleTable userRoleTable){
-		UserRoleTableDto userRoleTableDto = new UserRoleTableDto();
-		userRoleTableDto.setUserId(userRoleTable.getUserId());
-		userRoleTableDto.setUserRoleId(userRoleTable.getUserRoleId());
-		return userRoleTableDto;
-	}
 
 }

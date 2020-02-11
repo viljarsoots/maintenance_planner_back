@@ -72,12 +72,7 @@ public class UserService {
     public List<User> findAll() {
         return userDao.findAll();
     }
-//    public void saveUser(UserDto userDto){
-//        User userAsModel = BeanUtils.dto2Model((userDto));
 //
-//        Set<UserRoleTable> userRoles = userRoleTableDao.saveAll(userDto.getUserRoleId());
-//        userRoles.forEach(userAsModel::addUserRoleTable);
-//    }
 
 
 }
