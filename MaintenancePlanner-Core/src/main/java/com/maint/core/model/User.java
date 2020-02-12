@@ -1,6 +1,6 @@
 package com.maint.core.model;
 
-import jdk.nashorn.internal.objects.annotations.Setter;
+//import jdk.nashorn.internal.objects.annotations.Setter;
 import lombok.AccessLevel;
 import lombok.Data;
 
