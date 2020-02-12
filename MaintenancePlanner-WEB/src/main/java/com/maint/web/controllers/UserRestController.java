@@ -1,6 +1,6 @@
 package com.maint.web.controllers;
 
-import com.maint.core.dao.UserDao;
+
 import com.maint.core.beans.UserDto;
 import com.maint.core.model.User;
 import com.maint.core.service.UserService;
@@ -19,8 +19,6 @@ import java.util.Optional;
 @RequestMapping("/rest")
 public class UserRestController {
 
-    @Autowired
-    private UserDao userDao;
 
     @Autowired
     private UserService userService;

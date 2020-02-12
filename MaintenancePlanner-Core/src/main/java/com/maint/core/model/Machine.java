@@ -1,11 +1,10 @@
 package com.maint.core.model;
 
 import lombok.Data;
+import lombok.Getter;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
+import java.util.List;
 
 @Data
 @Entity
@@ -17,10 +16,14 @@ public class Machine {
 	private Long id;
 	private String machineName;
 	private String startupDate;
-	private Long locationId;
+	private Long customerId;
 	private Long maintenancePlanId;
 	private Long machineProducerId;
 	
-	
-	
+	@ManyToOne()
+	@JoinTable(name = "customerMachines",
+			joinColumns = @JoinColumn(name = "customerId"), inverseJoinColumns = @JoinColumn(name = "machineId")
+	)
+	@Getter
+	private Customer customer;
 }

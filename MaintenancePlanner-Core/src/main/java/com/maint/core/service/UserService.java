@@ -7,9 +7,7 @@ import com.maint.core.model.User;
 import com.maint.core.beans.UserDto;
 import com.maint.core.utils.BeanUtils;
 import lombok.extern.slf4j.Slf4j;
-import org.hibernate.Session;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Repository;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
@@ -23,7 +21,6 @@ import java.util.Optional;
 @Service
 @Slf4j
 @Transactional
-
 public class UserService {
 
 
@@ -36,7 +33,7 @@ public class UserService {
 
     public Optional<User> findById(Long id) {
         if (!(userDao.findById(id).isPresent())){
-            throw new UserException("Course was not found!");
+            throw new UserException("User was not found!");
         } else {
             return Optional.of(userDao.findById(id).get());
 
@@ -72,7 +69,7 @@ public class UserService {
     public List<User> findAll() {
         return userDao.findAll();
     }
-//
+
 
 
 }
