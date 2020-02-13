@@ -1,11 +1,14 @@
 package com.maint.core.model;
 
+import lombok.AccessLevel;
 import lombok.Data;
+import lombok.Setter;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
+import java.util.ArrayList;
+import java.util.HashSet;
+import java.util.List;
+import java.util.Set;
 
 @Data
 @Entity
@@ -20,5 +23,9 @@ public class Customer {
 	private String address;
 	private String location;
 	
-	
+
+
+	@OneToMany(fetch=FetchType.LAZY,  mappedBy= "customer")
+	@Setter(value = AccessLevel.NONE)
+	private List<Machine> machineSet = new ArrayList<>();
 }

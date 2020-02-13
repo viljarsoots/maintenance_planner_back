@@ -9,7 +9,7 @@ public class MachineDto {
 	private Long id;
 	private String machineName;
 	private String startupDate;
-	private Long customerId;
+	//private Long customerId;
 	private Long maintenancePlanId;
 	private Long machineProducerId;
 	

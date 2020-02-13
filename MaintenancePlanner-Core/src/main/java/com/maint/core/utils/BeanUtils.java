@@ -7,6 +7,8 @@ import com.maint.core.model.Customer;
 import com.maint.core.model.Machine;
 import com.maint.core.model.User;
 
+import java.util.List;
+
 public class BeanUtils {
 
 
@@ -57,10 +59,11 @@ public class BeanUtils {
 		machine.setId(dto.getId());
 		machine.setMachineName(dto.getMachineName());
 		machine.setStartupDate(dto.getStartupDate());
-		machine.setCustomerId(dto.getCustomerId());
+		//machine.setCustomerId(dto.getCustomerId());
 		machine.setMaintenancePlanId(dto.getMaintenancePlanId());
 		machine.setMachineProducerId(dto.getMachineProducerId());
 		machine.setCustomer(dto.getCustomer());
+
 		return machine;
 	}
 
@@ -69,9 +72,10 @@ public class BeanUtils {
 		dto.setId(model.getId());
 		dto.setMachineName(model.getMachineName());
 		dto.setStartupDate(model.getStartupDate());
-		dto.setCustomerId(model.getCustomerId());
+		//dto.setCustomerId(model.getCustomerId());
 		dto.setMaintenancePlanId(model.getMaintenancePlanId());
 		dto.setMachineProducerId(model.getMachineProducerId());
+		dto.setCustomer(model.getCustomer());
 
 		return dto;
 	}

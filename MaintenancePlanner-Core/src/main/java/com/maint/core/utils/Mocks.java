@@ -30,7 +30,7 @@ public class Mocks {
 		Machine newMachine = new Machine();
 		newMachine.setMachineName("Juno");
 		newMachine.setStartupDate("2019-05-25");
-		newMachine.setCustomerId(3L);
+		//newMachine.setCustomerId(3L);
 		newMachine.setMaintenancePlanId(4L);
 		newMachine.setMachineProducerId(12L);
 
@@ -43,7 +43,7 @@ public class Mocks {
 		newMachine.setId(9L);
 		newMachine.setMachineName("juku");
 		newMachine.setStartupDate("2019-06-25");
-		newMachine.setCustomerId(7L);
+		//newMachine.setCustomerId(7L);
 		newMachine.setMaintenancePlanId(4L);
 		newMachine.setMachineProducerId(12L);
 

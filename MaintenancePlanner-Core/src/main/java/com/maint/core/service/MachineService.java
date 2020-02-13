@@ -56,7 +56,7 @@ public class MachineService {
         machine.setId(machineDto.getId());
         machine.setMachineName(machineDto.getMachineName());
         machine.setStartupDate(machineDto.getStartupDate());
-        machine.setCustomerId(machineDto.getCustomerId());
+        //machine.setCustomerId(machineDto.getCustomerId());
         machine.setMaintenancePlanId(machineDto.getMaintenancePlanId());
         machine.setMachineProducerId(machineDto.getMachineProducerId());
 
