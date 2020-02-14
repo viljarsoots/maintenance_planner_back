@@ -1,5 +1,6 @@
 package com.maint.core.model;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.Data;
 import lombok.Getter;
 
@@ -22,6 +23,7 @@ public class Machine {
 	private Long machineProducerId;
 	
 	@ManyToOne
+	@JsonIgnore
 	@JoinTable(name="machineCustomer",
 		joinColumns = @JoinColumn(name= "machineId"),
 			inverseJoinColumns = @JoinColumn(name="customerId")
