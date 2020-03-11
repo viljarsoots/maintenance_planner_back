@@ -1,6 +1,7 @@
 package com.maint.core.model;
 
 import lombok.Data;
+import org.springframework.http.converter.json.GsonBuilderUtils;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -17,4 +18,7 @@ public class MaintenancePlan {
 	private Long id;
 	private String name;
 	private Long machineId;
+
+
+
 }

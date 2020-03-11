@@ -2,9 +2,11 @@ package com.maint.core.utils;
 
 import com.maint.core.beans.CustomerDto;
 import com.maint.core.beans.MachineDto;
+import com.maint.core.beans.MachineProducerDto;
 import com.maint.core.beans.UserDto;
 import com.maint.core.model.Customer;
 import com.maint.core.model.Machine;
+import com.maint.core.model.MachineProducer;
 import com.maint.core.model.User;
 
 import java.util.List;
@@ -63,7 +65,7 @@ public class BeanUtils {
 		machine.setMaintenancePlanId(dto.getMaintenancePlanId());
 		machine.setMachineProducerId(dto.getMachineProducerId());
 		machine.setCustomer(dto.getCustomer());
-
+		machine.setMachineProducer(dto.getMachineProducer());
 		return machine;
 	}
 
@@ -76,8 +78,30 @@ public class BeanUtils {
 		dto.setMaintenancePlanId(model.getMaintenancePlanId());
 		dto.setMachineProducerId(model.getMachineProducerId());
 		dto.setCustomer(model.getCustomer());
+		dto.setMachineProducer(model.getMachineProducer());
 
 		return dto;
 	}
+
+	public static MachineProducer dto2Model(MachineProducerDto dto){
+		MachineProducer machineProducer = new MachineProducer();
+		machineProducer.setId(dto.getId());
+		machineProducer.setProducerName(dto.getProducerName());
+		machineProducer.setProducerAddress(dto.getProducerAddress());
+
+		return machineProducer;
+	}
+
+	public static MachineProducerDto model2Dto(MachineProducer machineProducer){
+		MachineProducerDto dto = new MachineProducerDto();
+		dto.setId(machineProducer.getId());
+		dto.setProducerName(machineProducer.getProducerName());
+		dto.setProducerAddress(machineProducer.getProducerAddress());
+
+		return dto;
+	}
+
+
+
 
 }

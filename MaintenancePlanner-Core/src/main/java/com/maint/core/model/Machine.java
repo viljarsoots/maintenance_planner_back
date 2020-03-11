@@ -18,7 +18,6 @@ public class Machine {
 	private Long id;
 	private String machineName;
 	private String startupDate;
-	//private Long customerId;
 	private Long maintenancePlanId;
 	private Long machineProducerId;
 	
@@ -29,4 +28,13 @@ public class Machine {
 			inverseJoinColumns = @JoinColumn(name="customerId")
 	)
 	private Customer customer;
+
+	@ManyToOne
+	@JsonIgnore
+	@JoinTable(name="machineProducerJoin",
+			joinColumns = @JoinColumn(name= "machineId"),
+			inverseJoinColumns = @JoinColumn(name="machineProducerId")
+	)
+	private MachineProducer machineProducer;
+
 }

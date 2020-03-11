@@ -1,4 +1,4 @@
-package com.maint.core.dao.helpers;
+package com.maint.core.helpers;
 
 import com.maint.core.model.User;
 import org.springframework.jdbc.core.RowMapper;

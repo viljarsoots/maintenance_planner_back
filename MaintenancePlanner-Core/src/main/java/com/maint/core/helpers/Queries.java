@@ -1,4 +1,4 @@
-package com.maint.core.dao;
+package com.maint.core.helpers;
 
 public class Queries {
 
